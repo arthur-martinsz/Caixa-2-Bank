@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/*para celulares e tablets*/
+@media (max-width: 900px) {
+    .body {
+        background-color: #1f0025;
+    }
+
+    .form-login {
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        height: 500px;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: 'Inter', sans-serif;
+        margin: auto;
+    }
+
+    .metade-direita {
+        height: 100%;
+        padding: 40px;
+        font-family: 'Inter', sans-serif;
+
+    }
+    .img-logo {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .metade-esquerda {
+        display: none;
+    }
+
+    .fixed-header {
+        display: grid;
+        top: 0;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    header {
+        width: auto;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .logo {
+        width: auto;
+        height: 100px;
+        padding: 0;
+
+    }
+
+    .title-header {
+        display: grid;
+        justify-content: center;
+        text-align: left;
+        padding-top: auto;
+        color: black;
+
+
+    }
+
+    .label-1 {
+        display: grid;
+        justify-content: flex-start;
+        text-align: center;
+        padding-top: auto;
+        color: #777777;
+    }
+
+    legend {
+        display: none; /* Para ocultar o texto do legend */
+    }
+
+    .fixed-footer {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        bottom: 0;
+        padding-top: 100px;
+
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .link {
+        width: auto;
+        padding: auto;
+        margin: auto 10px;
+    }
+
+    .link-primary {
+        font-size: 25px;
+        text-align: center;
+        color: #ffffff;
+        text-decoration: none;
+        -webkit-text-stroke: 1px #000000;
+        text-shadow: 1px #000000;
+    }
+
+    .link-primary:hover {
+        text-decoration: underline;
+    }
+
+    /*alinha o botao de entrar */
+    .grid-container {
+        display: grid;
+        gap: 16px;
+    }
+
+    /* Estilos do bot�o amarelo */
+    .btn-primary {
+        background-color: #7c7c7c;
+        color: #ffffff;
+        border: none;
+        padding: 5px;
+        text-align: center;
+        display: inline-block;
+        font-size: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Estiliza��o quando o mouse passa por cima do bot�o */
+    .btn-primary:hover {
+        background-color: #7e7e7e; /* Altera a cor de fundo quando o mouse passa por cima */
+    }
+
+}
+
+@media (min-width: 900px) {
+    .body {
+        background-color: #0157a7;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+
+    }
+    .img-logo {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .form-login {
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        height: 500px;
+        padding: 20px;
+        border-radius: 0px 15px 15px 0px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .metade-direita, .metade-esquerda {
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 1);
+        border-radius: 15px;
+    }
+
+    .image-1 {
+
+        border-radius: 15px 0px 0px 15px;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    header {
+        margin-top: 20px;
+        width: auto;
+        font-family: 'Inter', sans-serif;
+    }
+
+
+    .title-header {
+        text-align: center;
+
+        font-weight: 900;
+        color: #333;
+
+    }
+
+    legend {
+        display: none; /* Para ocultar o texto do legend */
+    }
+
+    .fixed-footer {
+        margin-left: 20px;
+        padding-top: 40px;
+    }
+
+    .navigation, .grid-container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .link {
+        width: auto;
+        padding: 10px;
+        margin: auto 10px;
+    }
+
+    .link-primary {
+        font-size: 20px;
+        color: #7c7c7c;
+        text-decoration: none;
+        -webkit-text-stroke: 1px #000000;
+        text-shadow: 1px #000000;
+    }
+
+    .link-primary:hover {
+        text-decoration: underline;
+    }
+
+
+    /* Estilos do bot�o*/
+    .btn-primary {
+        background-color: #7e7e7e;
+        color: #ffffff;
+        border: none;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-size: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    /* Estiliza��o quando o mouse passa por cima do bot�o */
+    .btn-primary:hover {
+        background-color: #585858; /* Altera a cor de fundo quando o mouse passa por cima */
+    }
+
+    .input-no-border {
+
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .input-no-border:focus {
+        border: none !important;
+        outline: none !important;
+    }
+}
+    
+
+
+    

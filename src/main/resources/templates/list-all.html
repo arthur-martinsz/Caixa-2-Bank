@@ -1,0 +1,99 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style-dashboard.css">
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/fav.png">
+
+    <title>Listar usuários</title>
+</head>
+<body>
+<header>
+    <img class="img-logo" src="/images/logo%20topzera.png" alt="caixa 2 bank">
+    <h1 class="title-header">Listar todos os usuários</h1>
+    <a th:href="@{/admin/dashboard}">
+        <i class="fa-solid fa-arrow-right-from-bracket fa-2xl"
+           style="color: #000000;"></i>
+    </a>
+</header>
+<main>
+
+    <div class="text-center mb-4">
+        <div th:if="${alert != null}" th:class="${alert == 'error'} ? 'alert alert-danger' : 'alert alert-success'"
+             role="alert">
+            <h4 th:text="${title}" class="alert-heading"></h4>
+            <p th:text="${text}"></p>
+            <hr>
+            <p class="mb-0"><small th:text="${subtext}"></small></p>
+        </div>
+    </div>
+
+    <table class="table" th:if="${allUsers.size() > 0}">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>CPF</th>
+            <th>Número da conta</th>
+            <th>Saldo</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="user: ${allUsers}">
+            <td th:text="${user.getUser().getUsername()}"></td>
+            <td th:text="${user.getUser().getCpf()}"></td>
+            <td th:text="${user.getNumber()}"></td>
+            <td th:text="${user.getBalance()}"></td>
+            <td th:text="${user.getUser().getEmail()}"></td>
+            <td><a th:href="@{/admin/delete/{id}(id=${user.getNumber()})}">
+                <button class="btn btn-dark">Excluir user</button>
+            </a></td>
+        </tr>
+        </tbody>
+    </table>
+    <section>
+        <div class="card">
+            <button class="btn btn-dark" id="view-deposit-form" th:if="${allUsers.size() > 0}">Depositar</button>
+
+            <form th:action="@{/admin/deposit}" method="post" id="deposit-form" style="display: none">
+                <i id="close" class="fa-solid fa-circle-xmark"></i>
+
+                <div class="input-group mb-3">
+                    <input class="form-control" placeholder="Número da conta ou chave pix para depósito" type="text"
+                           name="login" required>
+
+                </div>
+
+                <div class="input-group mb-3">
+                    <input class="form-control" placeholder="Valor do depósito" type="number" name="value" required>
+                </div>
+
+                <button class="btn btn-dark" type="submit">Depositar</button>
+            </form>
+
+
+        </div>
+    </section>
+</main>
+
+<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js}"></script>
+<script>
+    $('#view-deposit-form').click(() => {
+        $('#deposit-form').attr('style', 'display: unset');
+        $('#view-deposit-form').attr('style', 'display: none');
+    });
+
+    $('#close').click(() => {
+        $('#deposit-form').attr('style', 'display: none');
+        $("#deposit-form").find('input').val('');
+        $('#view-deposit-form').attr('style', 'display: unset');
+    });
+</script>
+<script src="https://kit.fontawesome.com/a20fb09076.js" crossorigin="anonymous"></script>
+</body>
+</html>

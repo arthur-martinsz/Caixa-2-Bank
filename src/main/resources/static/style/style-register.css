@@ -1,0 +1,238 @@
+/*style-register*/
+/*para celulares e tablets*/
+@media ( max-width: 900px) {
+    .body {
+        background: #f3f3f3;
+
+    }
+
+    .form-login {
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 900px;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: 'Inter', sans-serif;
+        margin: auto;
+    }
+
+    .metade-direita {
+        height: 100%;
+        padding: 40px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .metade-esquerda {
+        display: none;
+    }
+
+    .fixed-header {
+        display: grid;
+        top: 0;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    header {
+        width: auto;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .logo {
+        width: auto;
+        height: 100px;
+        padding: 0;
+    }
+
+    .title-header {
+        text-align: center;
+        font-weight: 900 !important;
+        color: #000000;
+
+    }
+    legend {
+        display: none; /* Para ocultar o texto do legend */
+    }
+
+    .fixed-footer {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        bottom: 0;
+        padding-top: 100px;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .link {
+        width: auto;
+        padding: auto;
+        margin: auto 10px;
+    }
+
+    .link-primary {
+        font-size: 25px;
+        text-align: center;
+        color: #ffffff;
+        text-decoration: none;
+        -webkit-text-stroke: 1px #000000;
+        text-shadow: 1px #000000;
+    }
+
+    .link-primary:hover {
+        text-decoration: underline;
+    }
+
+    /*alinha o botao de entrar */
+    .grid-container {
+        display: grid;
+        gap: 16px;
+    }
+
+    /* Estilos do bot�o amarelo */
+    .btn-primary {
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-size: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    /* Estiliza��o quando o mouse passa por cima do bot�o */
+    .btn-primary:hover {
+        background-color: #212121;
+
+        /* Altera a cor de fundo quando o mouse passa por cima */
+    }
+
+}
+
+@media ( min-width: 900px) {
+    .body {
+        background: #f3f3f3;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+
+
+    }
+
+    .form-login {
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        height: 850px;
+        padding: 20px;
+        border-radius: 0px 15px 15px 0px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .metade-direita, .metade-esquerda {
+
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 1);
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 1);
+    }
+
+    .image-1 {
+        border-radius: 15px 0px 0px 15px;
+        min-width: 350px;
+        height: 850px;
+        object-fit: cover;
+    }
+
+    header {
+        margin-top: 20px;
+        width: auto;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .title-header {
+        text-align: center;
+        font-weight: 900;
+        color: #000000;
+    }
+
+    legend {
+        display: none; /* Para ocultar o texto do legend */
+    }
+
+    .fixed-footer {
+        margin-left: 20px;
+        padding-top: 40px;
+    }
+
+    .navigation, .grid-container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .link {
+        width: auto;
+        padding: 10px;
+        margin: auto 10px;
+    }
+
+    .link-primary {
+        font-size: 20px;
+        color: #000000;
+        text-decoration: none;
+        -webkit-text-stroke: 1px #000000;
+        text-shadow: 1px #000000;
+    }
+
+    .link-primary:hover {
+        text-decoration: underline;
+
+    }
+
+    /* Estilos do bot�o*/
+    .btn-primary {
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-size: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    /* Estiliza��o quando o mouse passa por cima do bot�o */
+    .btn-primary:hover {
+        background-color: #212121;
+
+        /* Altera a cor de fundo quando o mouse passa por cima */
+    }
+    .img-adm{
+        width: 50;
+    }
+
+    .input-no-border {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .input-no-border:focus {
+        border: none !important;
+        outline: none !important;
+    }
+
+}
