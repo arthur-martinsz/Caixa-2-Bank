@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Caixa2Bank
 
 Um projeto de conta bancária todo em Java Spring Boot com Spring Security Stateful
@@ -8,8 +7,31 @@ Um projeto de conta bancária todo em Java Spring Boot com Spring Security State
 
 # Sobre o projeto
 
-Esse é nossa prova final do curso de Informatica para internet que fizemos no IF Goiano Campus Trindade
-o projeto se trata de Um CRUD similar a um banco convencional em que se pode enviar e receber dinheiro, editar, excluir e adicionar usuarios
+**Caixa2Bank** é uma aplicação web desenvolvida em Java utilizando o framework **Spring Boot**, com autenticação gerenciada via **Spring Security** (Stateful). Este projeto foi desenvolvido como trabalho final do curso de Informática para Internet do **IF Goiano - Campus Trindade**.
+
+A aplicação simula as funcionalidades básicas de um banco digital, permitindo aos usuários realizar operações como:
+
+- Cadastro e autenticação de contas
+- Transferências entre usuários
+- Visualização de extratos e geração de PDF
+- Edição e exclusão de perfis
+- Consulta de dados de transações
+
+---
+
+## Funcionalidades
+
+- Cadastro e login de usuários
+- Área restrita com autenticação via Spring Security
+- Envio e recebimento de valores entre contas
+- Geração de extrato bancário em PDF
+- Edição e exclusão de contas
+- Envio de e-mails (Spring Mail)
+- Layouts responsivos com Bootstrap
+- Integração com banco de dados PostgreSQL
+
+---
+
 # Como funciona
 ![Mobile 1](https://github.com/mateusp-rezende/assets/blob/main/_Fluxograma%20-%20%20Fluxograma.png)
 ## Layout da pagina principal
@@ -30,27 +52,33 @@ o projeto se trata de Um CRUD similar a um banco convencional em que se pode env
 ## pagina para alteração de dados
 ![Mobile 1](https://github.com/mateusp-rezende/assets/blob/main/frame8.jpg)
 
-## Modelo conceitual
-![Modelo Conceitual]()
+---
 
-# Tecnologias utilizadas
-## Back end
+## Tecnologias Utilizadas
+
+### Backend
 - Java
 - Spring Boot
-- Spring security
--  Spring Mail
--  Thymeleaf
--  Lombok
-- Jquery
-- PostgresSQL
-- Data jpa
+- Spring Security
+- Spring Mail
+- Spring Data JPA
+- Lombok
+- Thymeleaf
+- PostgreSQL
 - Maven
-- Libre pdf
+- LibrePDF
 
-## Front end
-- HTML / CSS / JS / Bootstrap
-# Autores
-### Mateus de Paula Rezende,Victor Manoel Silva Nascimento e Arthur Rodrigues Martins.
+### Frontend
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- jQuery
 
+---
 
->>>>>>> 75f1056ba771eb0ca3dafce2bb9b453ff456ea17
+## Autores
+
+- **Arthur Rodrigues Martins**
+- **Mateus de Paula Rezende**
+- **Victor Manoel Silva Nascimento**
