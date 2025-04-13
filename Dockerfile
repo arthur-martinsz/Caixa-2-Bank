@@ -1,17 +1,10 @@
-FROM ubuntu:latest AS build
-
-RUN apt-get update
-RUN apt-get install openjdk-17 -y
-
+FROM eclipse-temurin:17-jdk as builder
+WORKDIR /workspace
 COPY . .
+RUN ./mvnw clean package -DskipTests  # Linha crucial!
 
-RUN apt-get install maven -y
-RUN mvn clean install
-
-FROM openjdk:17-jdk-slim
-
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+COPY --from=builder /workspace/target/*.jar app.jar
 EXPOSE 8080
-
-COPY target/Caixa-2-Bank.jar app.jar
-
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+ENTRYPOINT ["java", "-jar", "app.jar"]
